@@ -93,14 +93,19 @@ common_initCommandOptions ( struct commonOptions *commonOpt,
 {
     if (commonOpt != NULL) {
         commonOpt->username[0] = ( char ) 0;
+        strcpy(commonOpt->username, "member_cm_prod");
         commonOpt->password[0] = ( char ) 0;
+        strcpy(commonOpt->password, "LxJRe#0414");
         commonOpt->vpn[0] = ( char ) 0;
+        strcpy(commonOpt->vpn, "od_cm_prod");
         commonOpt->targetHost[0] = ( char ) 0;
+        strcpy(commonOpt->targetHost, "172.28.124.44:10987");
         commonOpt->cacheName[0] = ( char ) 0;
         commonOpt->replayStartLocation[0] = ( char ) 0;
         commonOpt->usingTopic = 1;       /* TRUE pub/sub to/from Topic */
         commonOpt->usingAD = 0; /* FALSE pub/sub direct */
-        commonOpt->destinationName[0] = ( char ) 0;
+        commonOpt->destinationName[0] = (char)0;
+        strcpy(commonOpt->destinationName, "lvq.nse.cm.od.1.orderbook");
         commonOpt->numMsgsToSend = 1;
         commonOpt->msgRate = 1;
         commonOpt->gdWindow = 0;
